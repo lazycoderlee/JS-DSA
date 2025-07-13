@@ -1,13 +1,13 @@
-function removeDuplicates(n) {
-  let k = 0;
-  for (let i = 0; i < n.length; i++) {
-    if (n[i] > n[k]) {
-      k = k + 1;
-      n[k] = n[i];
+function removeDuplicates(nums) {
+  let x = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > nums[x]) {
+      x = x + 1;
+      nums[x] = nums[i];
     }
   }
-  console.log(n, 'Array');
-  return k + 1;
+  console.log(nums, 'Removed duplicates');
+  return x + 1;
 }
 // Time complexity O(n)
 // Space complexity O(n)
